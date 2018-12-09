@@ -1,60 +1,84 @@
-body{
+body {
     margin: 0;
+    background-color: rgba(200, 218, 234, 0.5);
+    font-size: 1.3em;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
 }
 
 /*Navigation bar with dropdown menu*/
 .navbar {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    padding-left: 10%;
     overflow: hidden;
     background-color: #000066;
-    
+    padding-left: 10%;
 }
-.navbar li {
+
+.navbar a {
     float: left;
-}
-.navbar li a{
-    display: block;
-    color: white;
+    color: #f2f2f2;
     text-align: center;
     padding: 20px;
     text-decoration: none;
+
 }
-.dropdown .dropbtn {  
+
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.active {
+    background-color: #000066;
+    color: white;
+}
+
+.navbar .projects {
+    display: none;
+}
+
+.navbar .icon {
+    display: none;
+}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown .dropbtn {
     border: none;
     outline: none;
+    color: white;
     background-color: inherit;
+    font-family: inherit;
+    padding-bottom: 16px;
     margin: 0;
 }
+
 .dropdown-content {
     display: none;
     position: absolute;
     background-color: #000066;
     min-width: 160px;
+    margin-top: 58px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
 }
+
 .dropdown-content a {
     float: none;
-    color: black;
+    color: white;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
     text-align: left;
 }
+
 .dropdown-content a:hover {
     background-color: #ddd;
 }
 
 .dropdown:hover .dropdown-content {
     display: block;
-}
-.navbar li a:hover, .dropdown:hover .dropbtn {
-    background-color: #00004d;
-}
-.navbar li a.active{
-    background-color: #00004d;  
 }
 
 /*main content on the home page*/
@@ -65,21 +89,30 @@ main {
     align-items: center;
     flex-direction: column;
 }
+
 main img {
     display: block;
 }
+
 .b1, .b2, .b3 {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
 }
+.main-index {
+    padding: 20px 0;
+}
 .bp1, .bp2, .bp3 {
     flex-basis: 30%;
+}
+.bm1, .bm2, .bm3 {
+    border-radius: 20px;
 }
 .bm2 {
     order: 1;
 }
+
 .bp2 {
     order: 2;
 }
@@ -89,20 +122,25 @@ main img {
     display: flex;
     flex-direction: column;
 }
+
 .edu {
     display: flex;
     direction: row;
     justify-content: center;
 }
+
 .bio_header {
     text-align: center;
 }
+
 .edub1, .edub2, .edub3 {
     flex-basis: 40%;
 }
+
 .skill-div {
     width: 100%;
 }
+
 #bio-img {
     display: block;
     justify-self: center;
@@ -113,13 +151,14 @@ main img {
     font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
     border-collapse: collapse;
     width: 100%;
-  }
-  
-  #customers td, #customers th {
+}
+
+#customers td, #customers th {
     border: 1px solid #ddd;
     padding: 8px;
-  }
-  .skill-header {
+}
+
+.skill-header {
     width: 100%;
     border: 1px solid #ddd;
     padding-top: 12px;
@@ -128,59 +167,78 @@ main img {
     color: white;
     margin: 0;
     background-color: #000066;
-  }
-  #customers tr:nth-child(even){background-color: #f2f2f2;}
-  
-  #customers tr:hover {background-color: #ddd;}
-  
-  #customers th {
+}
+
+#customers tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#customers tr:hover {
+    background-color: #ddd;
+}
+
+#customers th {
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: left;
     background-color: #000066;
     color: white;
-  }
+}
+
 #customers th {
     width: 20%;
 }
 
-
-
-
-
-
-
-
-/*design for articles - made a lot of changes*/
+/*design for articles*/
 .blog-main {
     width: 100%;
     margin: 5%;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    
+    justify-content: center;
+
 }
+
 .article-preview {
+    background-color: white;
     display: flex;
     flex-direction: column;
     width: 40%;
-    border: 2px solid black;
+    border: 1px solid #ddd;
     text-decoration: none;
+    opacity: 0.5;
+    border-collapse: collapse;
 }
+
+.article-preview:hover {
+    opacity: 1;
+}
+
 .article-preview h2 {
     margin: 0;
+    margin-bottom: 10px;
     text-align: left;
     color: white;
     padding: 5px 10px;
     background-color: #000066;
 }
+
 .article-preview img {
     display: block;
     margin: auto;
 }
 
+.article-preview p {
+    border-top: 1px solid #ddd;
+    padding: 5px;
+    height: 50px;
+    color: black;
+}
 
-
+.article-main {
+    align-self: center;
+    width: 80%;
+}
 
 .article-main {
     align-self: center;
@@ -190,4 +248,148 @@ main img {
 /*design for contact page*/
 .mail-form {
     align-self: center;
+    width: 40%;
 }
+
+.mail-form input, textarea {
+    width: 100%;
+}
+
+.mail-form p {
+    margin: 0;
+    padding: 5px;
+    color: #000066;
+}
+
+input[type=submit] {
+    width: 100%;
+    background-color: #000066;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+
+input[type=submit]:hover {
+    background-color: #ddd;
+}
+
+@media screen and (max-width: 600px) {
+    .navbar a:not(:first-child) {
+        display: none;
+    }
+
+    .navbar div.dropdown {
+        display: none;
+    }
+
+    .navbar projects {
+        display: block;
+    }
+
+    .navbar {
+        padding-left: 0;
+    }
+
+    .navbar a.icon {
+        float: right;
+        display: block;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .navbar.responsive {
+        position: relative;
+    }
+
+    .navbar.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .navbar.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+}
+
+@import url('//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
+
+#social {
+    margin: 20px 10px;
+    text-align: center;
+}
+
+.smGlobalBtn { /* global button class */
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    border: 2px solid #ddd; /* add border to the buttons */
+    box-shadow: 0 3px 3px #999;
+    padding: 0px;
+    text-decoration: none;
+    text-align: center;
+    color: #fff;
+    font-size: 25px;
+    font-weight: normal;
+    line-height: 2em;
+    border-radius: 27px;
+    -moz-border-radius: 27px;
+    -webkit-border-radius: 27px;
+}
+
+/* facebook button class*/
+.facebookBtn {
+    background: #4060A5;
+}
+
+.facebookBtn:before { /* use :before to add the relevant icons */
+    font-family: "FontAwesome";
+    content: "\f09a"; /* add facebook icon */
+}
+
+.facebookBtn:hover {
+    color: #4060A5;
+    background: #fff;
+    border-color: #4060A5; /* change the border color on mouse hover */
+}
+
+/* linkedin button class*/
+.linkedinBtn {
+    background: #0094BC;
+}
+
+.linkedinBtn:before {
+    font-family: "FontAwesome";
+    content: "\f0e1"; /* add linkedin icon */
+}
+
+.linkedinBtn:hover {
+    color: #0094BC;
+    background: #fff;
+    border-color: #0094BC;
+}
+
+/* github button class*/
+.githubBtn {
+    background: black;
+}
+
+.githubBtn:before {
+    font-family: "FontAwesome";
+    content: "\f09b"; /* add github icon */
+}
+
+.githubBtn:hover {
+    color: black;
+    background: #fff;
+    border-color: black;
+}
+

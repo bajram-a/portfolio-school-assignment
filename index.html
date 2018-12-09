@@ -1,54 +1,67 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8"/>
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="images/technical-support.png" type="image/vnd.microsoft.icon">
     <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script>
+        function myFunction() {
+            var x = document.getElementById("mynavbar");
+            if (x.className === "navbar") {
+                x.className += " responsive";
+            } else {
+                x.className = "navbar";
+            }
+        }
+    </script>
 </head>
 <body>
-    <div>
-        <ul class="navbar">
-            <li><a class="active" href="index.html">Home</a></li>
-            <li>
-                <div class="dropdown">
-                    <a class="dropbtn" href="projects/projects.html">Projects<i class="fa fa-caret-down"></i></a>
-                    <div class="dropdown-content">
-                        <a href="#">Link 1</a>
-                        <a href="#">Link 2</a>
-                    </div>
+<div class="navbar" id="mynavbar">
+        <a class="active" href="index.html">Home</a>
+            <div class="dropdown">
+                <a class="dropbtn" href="projects/projects.html">Projects</a>
+                <div class="dropdown-content">
+                    <a href="#">Link 1</a>
+                    <a href="#">Link 2</a>
                 </div>
-            </li>
-            <li><a href="articles/blog.html">Articles</a></li>
-            <li><a href="bio.html">Bio</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
+            </div>
+        <a class="projects" href="projects/projects.html">Projects</a>
+        <a href="articles/blog.html">Articles</a>
+        <a href="bio.html">Bio</a>
+        <a href="contact.html">Contact</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+</div>
+<main class="main-index">
+    <div class="b1">
+        <p class="bp1">
+            Welcome to my example website. My name is Ahmed Bajramovic. I'm an up-and-coming web-developer looking to
+            prove
+            my skills and aquire new ones in a professional environment.
+        </p>
+        <img class="bm1" src="images/placeholder.jpg">
     </div>
-    <main>
-        <div class="b1">
-            <p class="bp1">
-                Welcome to my example website. My name is Ahmed Bajramovic. I'm an up-and-coming web-developer looking to prove 
-                my skills and aquire new ones in a professional environment.
-            </p>
-            <img class="bm1" src="images/placeholder.jpg">
-        </div>
-        
-        <div class="b2">
-            <p class="bp2">
-                Through this example site I hope to prove my ability to make simple, logical, functional and aesthetically 
-                pleasing web-sites, like this one. 
-            </p>
-            <img class="bm2" src="images/placeholder.jpg">
-        </div>
-        <div class="b3">
-            <p class="bp3">
-                Within this web-site You can find all the necessary information about me, as well as my contact information, 
-                a blog containing my thoughts on new technologies and some articles from other sites I found particularly 
-                interesting, as well as detailed information about my previous projects.
-            </p>
-            <img class="bm3" src="images/placeholder.jpg">
-        </div>
-    </main>
+
+    <div class="b2">
+        <p class="bp2">
+            Through this example site I hope to prove my ability to make simple, logical, functional and aesthetically
+            pleasing web-sites, like this one.
+        </p>
+        <img class="bm2" src="images/placeholder.jpg">
+    </div>
+    <div class="b3">
+        <p class="bp3">
+            Within this web-site You can find all the necessary information about me, as well as my contact information,
+            a blog containing my thoughts on new technologies and some articles from other sites I found particularly
+            interesting, as well as detailed information about my previous projects.
+        </p>
+        <img class="bm3" src="images/placeholder.jpg">
+    </div>
+</main>
 
 
 </body>

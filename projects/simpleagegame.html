@@ -1,20 +1,47 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8"/>
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+    <link rel="stylesheet" type="text/css" href="../css/stylesheet.css"/>
+    <link rel="icon" href="../images/technical-support.png" type="image/vnd.microsoft.icon">
 </head>
 <body>
-    <div>
-        <ul class="navbar">
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="../articles/blog.html">Articles</a></li>
-            <li><a href="../bio.html">Bio</a></li>
-            <li><a href="../contact.html">Contact</a></li>
-        </ul>
+<div class="navbar" id="mynavbar">
+    <a class="active" href="../index.html">Home</a>
+    <div class="dropdown">
+        <a class="dropbtn" href="../projects/projects.html">Projects</a>
+        <div class="dropdown-content">
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+        </div>
     </div>
+
+    <a class="projects" href="../projects/projects.html">Projects</a>
+    <a href="../articles/blog.html">Articles</a>
+    <a href="../bio.html">Bio</a>
+    <a href="../contact.html">Contact</a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+    </a>
+</div>
+<main>
+    <div>
+        <h1>Simle Age Game</h1>
+        <p>
+            This is one of the first things I ever made. As the name suggests it's a very simple console application written in C# 
+            that demonstartes some of the basic things you can do in C# (or any other programming language).
+        </p>
+        <p>
+            The app asks a user to input their date of birth and offers him a choice to find out exactly how old he is expressed 
+            in different units of time.
+        </p> 
+        <p>
+            While it sounds simple (maybe because it is), it manages to showcase a lot features like conditionals, branching, 
+            methods, variable parsing etc. The full "app" can be found on github.
+        </p>
+    </div>
+</main>
 </body>
 </html>

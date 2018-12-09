@@ -5,28 +5,56 @@
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="css/stylesheet.css" />
+    <link rel="icon" href="images/technical-support.png" type="image/vnd.microsoft.icon">
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script>
+        function myFunction() {
+            var x = document.getElementById("mynavbar");
+            if (x.className === "navbar") {
+                x.className += " responsive";
+            } else {
+                x.className = "navbar";
+            }
+        }
+    </script>
 </head>
 <body>
-    <div>
-        <ul class="navbar">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="projects/projects.html">Projects</a></li>
-            <li><a href="articles/blog.html">Articles</a></li>
-            <li><a href="bio.html">Bio</a></li>
-            <li><a class="active" href="contact.html">Contact</a></li>
-        </ul>
+<div class="navbar" id="mynavbar">
+    <a class="active" href="index.html">Home</a>
+    <div class="dropdown">
+        <a class="dropbtn" href="projects/projects.html">Projects</a>
+        <div class="dropdown-content">
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+        </div>
     </div>
+
+    <a class="projects" href="projects/projects.html">Projects</a>
+    <a href="articles/blog.html">Articles</a>
+    <a href="bio.html">Bio</a>
+    <a href="contact.html">Contact</a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+    </a>
+
+    </ul>
+</div>
     <main>
+        <div id="social">
+            <a class="facebookBtn smGlobalBtn" href="https://www.facebook.com/ahmed.bajramovic.71"  target="_blank"></a>
+            <a class="linkedinBtn smGlobalBtn" href="https://www.linkedin.com/in/ahmed-bajramovic-4b7945175/" target="_blank"></a>
+            <a class="githubBtn smGlobalBtn" href="https://github.com/bajram-a" target="_blank"></a>
+        </div>
         <div class="mail-form">
-            <form action="mailto:someone@example.com" method="post" enctype="text/plain">
-                Name:<br>
+            <form action="mailto:someone@mail.com" method="post" enctype="text/plain">
+                <p>Name:</p>
                 <input type="text" name="name"><br>
-                E-mail:<br>
+                <p>E-mail:</p>
                 <input type="text" name="mail"><br>
-                Comment:<br>
+                <p>Comment:</p>
                 <textarea rows="6" cols="50"></textarea><br>
                 <input type="submit" value="Send">
-                <input type="reset" value="Reset">
             </form>
         </div>
     </main>

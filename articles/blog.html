@@ -5,17 +5,40 @@
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+    <link rel="icon" href="../images/technical-support.png" type="image/vnd.microsoft.icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script>
+        function myFunction() {
+            var x = document.getElementById("mynavbar");
+            if (x.className === "navbar") {
+                x.className += " responsive";
+            } else {
+                x.className = "navbar";
+            }
+        }
+    </script>
 </head>
 <body>
-    <div>
-        <ul class="navbar">
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="../projects/projects.html">Projects</a></li>
-            <li><a href="blog.html">Articles</a></li>
-            <li><a href="../bio.html">Bio</a></li>
-            <li><a href="../contact.html">Contact</a></li>
-        </ul>
+<div class="navbar" id="mynavbar">
+    <a class="active" href="../index.html">Home</a>
+    <div class="dropdown">
+        <a class="dropbtn" href="../projects/projects.html">Projects</a>
+        <div class="dropdown-content">
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+        </div>
     </div>
+
+    <a class="projects" href="../projects/projects.html">Projects</a>
+    <a href="../articles/blog.html">Articles</a>
+    <a href="../bio.html">Bio</a>
+    <a href="../contact.html">Contact</a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+    </a>
+
+    </ul>
+</div>
     <main>
         <div class="blog-main">
             <a class="article-preview" href="article1.html">
@@ -23,11 +46,9 @@
                 <img src="../images/edge-chromium-400x400.jpg" alt="a">
                 <p>An unnecessary coupling between browser and operating system made compatibility too hard.</p>
             </a>
-        
-        
             <a class="article-preview" href="article2.html">
                 <h2>Microsoft continues its quest to embrace every developer with Visual Studio 2019</h2>    
-                <img src="../images/placeholder.jpg" alt="a">
+                <img src="../images/new-vs-icons-400x163.png" alt="a">
                 <p>More Linux and cloud services too</p>
             </a>
         </div>
