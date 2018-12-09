@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+</head>
+<body>
+    <div>
+        <ul class="navbar">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../projects/projects.html">Projects</a></li>
+            <li><a href="blog.html">Articles</a></li>
+            <li><a href="../bio.html">Bio</a></li>
+            <li><a href="../contact.html">Contact</a></li>
+        </ul>
+    </div>
+</body>
+</html>
+<main>
+    <div class="article-main">
+        <header>
+            <h1>Edge dies a death of a thousand cuts as Microsoft switches to Chromium</h1>
+            <h2>An unnecessary coupling between browser and operating system made compatibility too hard.</h2>
+            <p>PETER BRIGHT Taken from Ars Technica</p>
+        </header>
+
+        <img src="../images/edge-chromium-800x800.jpg" alt="">
+        
+        <p>
+            As reported earlier this week, Microsoft is going to use Google's Blink rendering engine and V8 JavaScript engine in its Edge browser, largely ending development 
+            of its own EdgeHTML rendering engine and Chakra JavaScript engine. This means that Microsoft will be using code from—and making contributions to—the 
+            Chromium open source project.
+        </p>
+        <p>
+            The company's browser will still be named Edge and should retain the current look and feel. The decision to switch was motivated primarily by compatibility problems: 
+            Web developers increasingly test their pages exclusively in Chrome, which has put Edge at a significant disadvantage. Microsoft's engineers have found that 
+            problematic pages could often be made Edge compatible with only very minor alterations, but because Web devs aren't using Edge at all, they don't even know that 
+            they need to change anything.
+        </p>
+        <p>
+            The story is, however, a little more complex. The initial version of Edge that shipped with the first version of Windows 10 was rudimentary, to say the least. 
+            It was the bare bones of a browser, but with extremely limited capabilities around things like tab management and password management, no extension model, and 
+            generally lacking in the creature comforts that represent the difference between a bare rendering engine and an actual usable browser. It also had stability 
+            issues; crashes and hangs were not uncommon.
+        </p>
+        <p>
+            Microsoft's own telemetry showed that many users did give Edge a chance, but as soon as a problem was encountered—a crash, a hang, or perhaps a page that 
+            didn't work right—they'd switch to Chrome and never really look back.
+        </p>
+        <p>
+            In each successive feature release of Windows 10, Edge has been improved. It's still not the most feature-rich browser, but it's just about good enough, and, 
+            while it has only a limited number of extensions, they can fill some of the functional gaps. The browser is substantially more stable than it used to be, 
+            and its site compatibility is nowadays very good, with incompatibilities relatively rare. Much of this compatibility improvement comes from Microsoft engineers 
+            investigating problem sites, determining the minor fixes needed, and making Edge itself fix the sites.
+        </p>
+        <h2>Self-inflicted wounds</h2>
+        <p>
+            But it turns out this isn't enough to bridge the compatibility gap. If every Edge user were using the very latest version of Edge, it wouldn't be so bad, 
+            but that's not the case, and that's because of how Microsoft has bundled Edge with Windows 10. Most home users will end up running the latest feature update 
+            to Windows 10 within a few months of its release. But enterprise users are more diverse. An enterprise that has rolled out Windows 10 version 1709 to 10,000 
+            seats may follow that by deploying version 1803 to another 10,000. The systems with 1709 will stick with 1709—after all, it's still supported—as the enterprise 
+            focuses its resources on getting legacy systems onto "some version of Windows 10," rather than getting every Windows 10 user onto the same version of Windows 10.
+        </p>
+        <p>
+            The result is that all those compatibility, stability, and feature improvements made in versions 1803 and 1809 will be completely off-limits to the machines running 1709. 
+            This means that Edge, already a relatively small target for Web developers to think about, suffers major version fragmentation. Contrast this with Chrome, where 
+            within a few days of a new version coming out, almost the entire user base is migrated.
+        </p>
+        <p>This coupling with Windows 10 similarly means that there's no facility to offer Edge to Windows 7 or even macOS users.
+            It's this issue that's perhaps the lethal, killer blow for Edge. If every Edge installation were always the latest and greatest one, and if corporations could 
+            standardize on Edge across their entire fleet—including Windows 7 systems, including Macs—then the browser might just have been a big enough, consistent enough 
+            target that it would be sustainable. But Redmond has decided that it isn't. Microsoft did consider decoupling the browser from Windows 10 so that it could be 
+            updated on its own cadence and so that it could be ported to Windows 7 (if not macOS), but for reasons that are unclear, it decided that the work to do this 
+            would be too substantial.
+        </p>
+        <p>
+            Switching to Blink is seen as the easier way to break the Windows 10 dependence, and so not only will Edge's release cycle be decoupled from Windows 10's, 
+            Microsoft will also make the new Edge available on Windows 7 and macOS. The old Edge rendering engine is probably not entirely going away; it will be used 
+            for embedded Web views in Windows apps.
+        </p>
+        <h2>New engine, new processes</h2>
+        <p>
+            The company wants to become a contributing member of the Chromium open source community. Early priorities include adding ARM64 compatibility to Chromium, 
+            enabling smooth scrolling with touch devices in Chromium, and improving the integration with screen readers to improve accessibility. Over the longer term, 
+            the company wants to bring unique Edge features, such as running risky content in an isolated virtual machine, to the new browser.
+        </p>
+        <p>
+            In tandem with this, the company is also having to develop new engineering processes. For its use of Chromium to be successful, Microsoft must be able to 
+            very quickly incorporate updates made to the Chromium code, build Edge, and then distribute it through Windows Update. Any delays in this process risks creating 
+            security gaps, wherein a flaw is fixed in Chrome/Chromium but still exposed in Edge. Quick integration is straightforward for a pure clone of Chromium, but the 
+            more Edge diverges from Chromium, the harder this task becomes. Designing this development process is still a work in progress. It's not yet known if, 
+            for example, Microsoft is going to adopt Google's multiple development channels.
+        </p>
+        
+        <p>
+            And, of course, it's not yet known how well Microsoft and the Chromium project will work together. Microsoft would like things, such as improvements to 
+            scrolling performance, to be merged into core Chromium so that the experience even of Chrome users on Windows is improved. But this isn't guaranteed. 
+            Blink is itself a fork of the WebKit rendering engine, created because Google and Apple couldn't reconcile their different priorities in the same codebase. 
+            Microsoft has significant reasons to want to avoid any major deviation, but it would be a shame if Edge users were forced to give up the things Edge does well 
+            just so Microsoft can stay close to Chromium.
+        </p>
+        
+        <p>
+            The need to create that engineering and development process has another consequence: Microsoft isn't expecting to have any builds of Edge with Blink for 
+            several months.
+        </p>
+
+    </div>
+</main>
