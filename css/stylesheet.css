@@ -93,9 +93,11 @@ main img {
 .bp1, .bp2, .bp3 {
     flex-basis: 30%;
     text-align: center;
+    text-shadow: 0 1px 1px #999;
 }
 .bm1, .bm2, .bm3 {
-    border-radius: 20px;
+    border-radius: 30px;
+    box-shadow: 0 3px 3px #999;;
 }
 .bm2 {
     order: 1;
@@ -108,6 +110,7 @@ main img {
     margin: 20px;
     border-radius: 100px;
     border: 10px solid #000066;
+    box-shadow: 0 3px 3px #999;
 }
 .education {
     display: flex;
@@ -123,6 +126,7 @@ main img {
 .skill-div {
     width: 60%;
     margin: 40px 0;
+    box-shadow: 0 3px 3px #999;
 }
 #bio-img {
     display: block;
@@ -164,7 +168,7 @@ main img {
 #skill-table th {
     width: 20%;
 }
-/*design for articles*/
+/*articles*/
 .blog-main {
     width: 100%;
     margin: 5%;
@@ -199,20 +203,41 @@ main img {
     margin: auto;
 }
 .article-preview p {
-    border-top: 1px solid #ddd;
+    border-top: px solid #ddd;
     padding: 5px;
     height: 50px;
     color: black;
 }
-.article-main {
-    align-self: center;
-    width: 80%;
+.article-header {
+    border-bottom: 2px solid #000066;
+}
+.article-header p {
+    padding: 5px 0 !important;
+}
+.article-header h2 {
+    font-size: inherit;
+}
+.article-header a {
+    text-decoration: none;
+    font-style: italic;
 }
 .article-main {
     align-self: center;
-    width: 80%;
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    padding: 10px;
+    background-color: white;
+    margin-bottom: 20px;
 }
-/*design for contact page*/
+.article-image {
+    align-self: center;
+    padding-top: 10px;
+}
+.article-main p {
+    padding: 5px 10px;
+}
+/*contact*/
 .mail-form {
     align-self: center;
     width: 40%;
@@ -308,6 +333,7 @@ input[type=submit]:hover {
     position: relative;
     border: 1px solid #ddd;
     border-collapse: collapse;
+    box-shadow: 0 3px 3px #999;
   }
 .project-image {
     display: block;
@@ -344,6 +370,131 @@ input[type=submit]:hover {
     width: 100%;
     justify-content: center;
 }
+/*individual project pages*/
+.individual-project-main {
+    width: 60%;
+    background-color: white;
+    padding: 20px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+.individual-project-main h1 {
+    text-align: center;
+}
+.individual-project-main p {
+    text-align: left;
+    padding: 10px;
+}
+.individual-project-main a {
+    text-decoration: none;
+}
+.mySlides {
+    display: none;
+}
+.slideshow-container img {
+    vertical-align: middle;
+    width: 100%;
+}
+.slideshow-container {
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+}
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+.active, .dot:hover {
+  background-color: #717171;
+}
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+/*project portfolio*/
+.project-portfolio-main {
+    width: 60%;
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+.project-portfolio-text {
+    padding: 5px;
+}
+.project-portfolio-text h1 {
+    text-align: center;
+}
+.project-portfolio-text p{
+    padding: 10px;
+}
+.project-portfolio-gallery {
+    margin: auto;
+    
+}
+.gallery {
+    margin: 10px;
+    border: 1px solid #ddd;
+    float: left;
+    width: 30%;
+    opacity: 0.8;
+  }
+  
+.gallery:hover {
+      opacity: 1;
+  }
+  
+.gallery img {
+    width: 100%;
+    height: auto;
+  }
+  
+.desc {
+    padding: 15px;
+    text-align: center;
+  }
 /*responsiveness*/
 @media screen and (max-width: 600px) {
     main {
@@ -398,7 +549,7 @@ input[type=submit]:hover {
     .project-container {
         padding: 10px 0;
     }
-    /*articles*/
+    /*articles main page*/
     .blog-main {
         flex-direction: column;
     }
@@ -420,4 +571,24 @@ input[type=submit]:hover {
         width: 100%;
         margin: 8px 0;
     }
+    /*individual articles*/
+    .article-main {
+        width: 100%;
+        padding: 5px;
+    }
+    .article-header {
+        padding: 5px;
+    }
+    /*individual projects*/
+    .individual-project-main {
+        width: 100%;
+    }
+    .project-portfolio-main {
+        width: 100%;
+    }
+    .gallery {
+        width: 90%;
+        padding: 10px;
+    }
 }
+    

@@ -6,26 +6,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
     <link rel="icon" href="../images/technical-support.png" type="image/vnd.microsoft.icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script>
+        function myFunction() {
+            var x = document.getElementById("mynavbar");
+            if (x.className === "navbar") {
+                x.className += " responsive";
+            } else {
+                x.className = "navbar";
+            }
+        }
+    </script>
 </head>
 <body>
-    <div>
-        <ul class="navbar">
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="../projects.html">Projects</a></li>
-            <li><a href="../articles/blog.html">Articles</a></li>
-            <li><a href="../bio.html">Bio</a></li>
-            <li><a href="../contact.html">Contact</a></li>
-        </ul>
+    <div class="navbar" id="mynavbar">
+        <a href="../index.html">Home</a>
+        <div class="dropdown">
+            <a class="dropbtn" href="../projects.html">Projects</a>
+            <div class="dropdown-content">
+                <a href="../projects/simpleagegame.html">Simple Age Game</a>
+                <a href="../projects/portfolio-page.html">My Portfolio</a>
+            </div>
+        </div>
+        <a class="projects" href="../projects/projects.html">Projects</a>
+        <a class="active" href="../articles/blog.html">Articles</a>
+        <a href="../bio.html">Bio</a>
+        <a href="../contact.html">Contact</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class="fa fa-bars"></i></a>
     </div>
 
     <main>
         <div class="article-main">
-                <header>
+                <header class="article-header">
                     <h1>Microsoft continues its quest to embrace every developer with Visual Studio 2019</h1>
                     <h2>More Linux and more cloud services, too.</h2>
-                    <p>Peter Bright Taken from Ars Technica</p>
+                    <p>Taken from <a href="https://arstechnica.com/gadgets/2018/12/microsoft-continues-its-quest-to-embrace-every-developer-with-visual-studio-2019/">
+                        Ars Technica</a>, written by Peter Bright</p>
                 </header>
-                <img src="../images/new-vs-icons-800x325.png">
+                <picture class="article-image" >
+                        <source srcset="../images/new-vs-icons-mobile.png" media="(max-width: 600px)">
+                        <source srcset="../../images/new-vs-icons-800x325.png">
+                        <img src="../../images/new-vs-icons-800x325.png" alt="Old and new Visual Studio icon">
+                    </picture>
                 <p>Microsoft today made a number of developer-oriented announcements that continue its theme of the last few years: 
                     the company wants its tools—and ultimately its platforms, especially Azure—to be the choice of every developer, 
                     no matter which languages and tools they use and no matter what platform they ultimately deploy on.

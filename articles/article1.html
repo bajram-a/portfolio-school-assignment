@@ -6,39 +6,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
     <link rel="icon" href="../images/technical-support.png" type="image/vnd.microsoft.icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script>
+        function myFunction() {
+            var x = document.getElementById("mynavbar");
+            if (x.className === "navbar") {
+                x.className += " responsive";
+            } else {
+                x.className = "navbar";
+            }
+        }
+    </script>
 </head>
 <body>
 <div class="navbar" id="mynavbar">
-    <a class="active" href="../index.html">Home</a>
+    <a href="../index.html">Home</a>
     <div class="dropdown">
         <a class="dropbtn" href="../projects.html">Projects</a>
         <div class="dropdown-content">
-            <a href="#">Link 1</a>
-            <a href="#">Link 2</a>
+            <a href="../projects/simpleagegame.html">Simple Age Game</a>
+            <a href="../projects/portfolio-page.html">My Portfolio</a>
         </div>
     </div>
-
     <a class="projects" href="../projects/projects.html">Projects</a>
-    <a href="../articles/blog.html">Articles</a>
+    <a class="active" href="../articles/blog.html">Articles</a>
     <a href="../bio.html">Bio</a>
     <a href="../contact.html">Contact</a>
-    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-        <i class="fa fa-bars"></i>
-    </a>
-
-    </ul>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class="fa fa-bars"></i></a>
 </div>
 </body>
 </html>
 <main>
     <div class="article-main">
-        <header>
+        <header class="article-header">
             <h1>Edge dies a death of a thousand cuts as Microsoft switches to Chromium</h1>
             <h2>An unnecessary coupling between browser and operating system made compatibility too hard.</h2>
-            <p>PETER BRIGHT Taken from Ars Technica</p>
+            <p>Taken from <a href="https://arstechnica.com/gadgets/2018/12/post-mortem-tying-edge-to-windows-10-was-a-fatal-error/">
+                Ars Technica</a>, written by Peter Bright</p>
         </header>
 
-        <img src="../images/edge-chromium-800x800.jpg" alt="">
+        <picture class="article-image" >
+            <source srcset="../images/edge-chromium-400x400.jpg" media="(max-width: 600px)">
+            <source srcset="../images/edge-chromium-800x800.jpg">
+            <img src="../images/edge-chromium-800x800.jpg" alt="Combined Edge icon with Chromium icon">
+        </picture>
         
         <p>
             As reported earlier this week, Microsoft is going to use Google's Blink rendering engine and V8 JavaScript engine in its Edge browser, largely ending development 

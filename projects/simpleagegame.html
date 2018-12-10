@@ -6,6 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="../css/stylesheet.css"/>
     <link rel="icon" href="../images/technical-support.png" type="image/vnd.microsoft.icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script>
+            function myFunction() {
+                var x = document.getElementById("mynavbar");
+                if (x.className === "navbar") {
+                    x.className += " responsive";
+                } else {
+                    x.className = "navbar";
+                }
+            }
+    </script>
 </head>
 <body>
 <div class="navbar" id="mynavbar">
@@ -13,35 +24,97 @@
     <div class="dropdown">
         <a class="dropbtn" href="../projects/projects.html">Projects</a>
         <div class="dropdown-content">
-            <a href="#">Link 1</a>
-            <a href="#">Link 2</a>
+            <a href="simpleagegame.html">Simple Age Game</a>
+            <a href="portfolio-page.html">My Portfolio</a>
         </div>
     </div>
-
     <a class="projects" href="../projects/projects.html">Projects</a>
     <a href="../articles/blog.html">Articles</a>
     <a href="../bio.html">Bio</a>
     <a href="../contact.html">Contact</a>
     <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-        <i class="fa fa-bars"></i>
-    </a>
+        <i class="fa fa-bars"></i></a>
 </div>
-<main>
+<main class="individual-project-main">
     <div>
-        <h1>Simle Age Game</h1>
+        <h1>Simple Age Game</h1>
         <p>
             This is one of the first things I ever made. As the name suggests it's a very simple console application written in C# 
             that demonstartes some of the basic things you can do in C# (or any other programming language).
         </p>
         <p>
-            The app asks a user to input their date of birth and offers him a choice to find out exactly how old he is expressed 
-            in different units of time.
+            The app asks a user to input their date of birth and offers them a choice to find out exactly how old they are, expressed 
+            in several different units of time.
         </p> 
         <p>
-            While it sounds simple (maybe because it is), it manages to showcase a lot features like conditionals, branching, 
-            methods, variable parsing etc. The full "app" can be found on github.
+            While it sounds simple (mainly because it is), it manages to showcase a lot features like conditionals, branching, 
+            methods, variable parsing etc. 
+        </p>
+        <p>
+            The gallery bellow showcases the code and the app running.
         </p>
     </div>
+    <div class="slideshow-container">
+        <div class="mySlides fade">
+            <div class="numbertext">1 / 5</div>
+            <img src="../images/sag.png">
+        </div>
+        <div class="mySlides fade">
+            <div class="numbertext">2 / 5</div>
+            <img src="../images/sag-running.png">
+        </div>
+        <div class="mySlides fade">
+            <div class="numbertext">3 / 5</div>
+            <img src="../images/sag-methods.png">
+        </div>
+        <div class="mySlides fade">
+            <div class="numbertext">4 / 5</div>
+            <img src="../images/sag-debugging.png">
+        </div>
+        <div class="mySlides fade">
+            <div class="numbertext">5 / 5</div>
+            <img src="../images/sag-dir.png">
+        </div>
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br>
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span> 
+            <span class="dot" onclick="currentSlide(2)"></span> 
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
+        </div><!--Na manjim ekranima slike bi se trebale pojavljivat jedna ispod druge, ali ne znam kako tacno to da uradim sad-->
+        <p><a href="https://github.com/bajram-a">The full "app" can be found on github.</a></p> <!--Work in progress!--->
 </main>
 </body>
+<script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+        
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+        
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+        
+        function showSlides(n) {
+          var i;
+          var slides = document.getElementsByClassName("mySlides");
+          var dots = document.getElementsByClassName("dot");
+          if (n > slides.length) {slideIndex = 1}    
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";  
+          }
+          for (i = 0; i < dots.length; i++) {
+              dots[i].className = dots[i].className.replace("active", "");
+          }
+        slides[slideIndex-1].style.display = "block";  
+        dots[slideIndex-1].className += " active";
+        }
+</script>
 </html>

@@ -6,27 +6,76 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="../css/stylesheet.css"/>
     <link rel="icon" href="../images/technical-support.png" type="image/vnd.microsoft.icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script>
+        function myFunction() {
+            var x = document.getElementById("mynavbar");
+            if (x.className === "navbar") {
+                x.className += " responsive";
+            } else {
+                x.className = "navbar";
+            }
+        }
+    </script>
 </head>
 <body>
 <div class="navbar" id="mynavbar">
-    <a class="active" href="index.html">Home</a>
+    <a href="../index.html">Home</a>
     <div class="dropdown">
-        <a class="dropbtn" href="projects/projects.html">Projects</a>
+        <a class="dropbtn active" href="projects.html">Projects</a>
         <div class="dropdown-content">
-            <a href="#">Link 1</a>
-            <a href="#">Link 2</a>
+            <a href="simpleagegame.html">Simple Age Game</a>
+            <a href="portfolio-page.html">My Portfolio</a>
         </div>
     </div>
-
-    <a class="projects" href="projects/projects.html">Projects</a>
-    <a href="articles/blog.html">Articles</a>
-    <a href="bio.html">Bio</a>
-    <a href="contact.html">Contact</a>
+    <a href="../articles/blog.html">Articles</a>
+    <a href="../bio.html">Bio</a>
+    <a href="../contact.html">Contact</a>
     <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-        <i class="fa fa-bars"></i>
-    </a>
-
-    </ul>
+        <i class="fa fa-bars"></i></a>
 </div>
+<main class="project-portfolio-main">
+    <div class="project-portfolio-text">
+            <h1>My Portfolio</h1>
+            <p>
+                This is the second ever "larger" project I've done. It's a portfolio website showcasing my abbilities as a 
+                web developer.
+            </p>
+            <p>
+                I've chosen to go wih a simplistic, but (hopefully) aestethically pleasing design, with a darker color pallet
+            </p>
+            <p>The entire design is also made responsive for use on mobile phones. 
+                Less so on medium sized devices but it's still a work in progress.
+            </p>
+            <!--Tekstovi koji objasnjavaju projekte su pokratki, nisam imao dovoljno vremena da ih pravilno napisem.-->
+    </div>
+    <div class="project-portfolio-gallery">
+        <div class="gallery">
+            <a target="_blank" href="../images/portfolio-articles.png">
+                <img src="../images/portfolio-articles.png" alt="" width="600" height="400">
+            </a>
+        </div>     
+        <div class="gallery">
+            <a target="_blank" href="../images/portfolio-contact.png">
+                <img src="../images/portfolio-contact.png" alt="" width="600" height="400">
+            </a>
+        </div>   
+        <div class="gallery">
+            <a target="_blank" href="../images/portfolio-home.png">
+                <img src="../images/portfolio-home.png" alt="" width="600" height="400">
+            </a>
+        </div>          
+        <div class="gallery">
+            <a target="_blank" href="../images/portfolio-projects.png">
+                <img src="../images/portfolio-projects.png" alt="" width="600" height="400">
+            </a>
+        </div>
+        <div class="gallery">
+            <a target="_blank" href="../images/portfolio-projects-sag.png">
+                <img src="../images/portfolio-projects-sag.png" alt="" width="600" height="400">
+            </a>
+        </div>
+    </div>
+</main>
 </body>
 </html>
